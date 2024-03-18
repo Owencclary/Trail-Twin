@@ -1,0 +1,70 @@
+
+SCRIPT
+
+    Hello, I'm Owen Clary, before Dev Mountain I was a college student, I then decide to take
+a break from college to deep drive into programming at Dev Mountain. 
+
+I'm excited to present my capstone project, Trail Twin. Trail Twin serves as a social media platform tailored for 
+connecting outdoor enthusiests in close proximity.
+
+I love outdoor sports and I made trail twin to make finding people to do outdoor sports with easier.
+
+
+
+Tech Stack:
+
+    I crafted Trail Twin using a tech stack in the backend which includes Python, Flask, SQLAlchemy, Google Maps API, and Cloudinary API. 
+For the frontend, I employed Bootstrap, JavaScript, HTML, and CSS, ensuring a seamless and visually appealing user experience.
+
+
+
+
+
+Main Features:
+
+    Upon entering Trail Twin, users encounter a streamlined login and registration process, guiding them to a gallery. 
+This gallery showcases registered users, displaying their profile photos, bios, names, and a snapshot of their favorite outdoor activities.
+
+    A standout feature is the dynamic search filter. Leveraging the Google Maps API, Trail Twin utilizes geocoding to pinpoint user
+locations based on latitude and longitude. 
+
+This feature empowers users to search for peers within a specified radius, considering factors like age, gender, and outdoor interests. 
+The result is a tailored gallery display of individuals who align with the user's preferences.
+
+
+
+
+User Profiles:
+
+    Trail Twin goes beyond a simple gallery by allowing users to personalize their profiles. Using Bootstrap and JavaScript, 
+I implemented an engaging slideshow for users to showcase their outdoor adventures.
+
+Displaying data works by managing SQL data on the backend
+with a CRUD file where the data is then display on the frontend with Flask.
+
+Additionally, Cloudinary API integration facilitates smooth photo uploads, enhancing the visual storytelling aspect of user profiles. Images are uploaded with ids 
+then displayed in the HTML with a url to the Cloudinary id.
+
+
+
+Social Connectivity:
+
+    The platform fosters connections through friend requests and an innovative friendship model. When users explore another's profile, 
+they can initiate a friend request. 
+
+The underlying SQL database employs a friendship model, complete with a "friend request" boolean.
+
+Upon acceptance, the boolean transforms, facilitating a seamless transition to the friends tab. Users can manage their connections 
+by accepting, declining, or removing friends. Future plans include implementing live messaging for enriched user interaction.
+
+
+
+
+
+Ending
+
+    The hardest part of my was the creating the complex friendship database maniplution and also the the search filter. Looking ahead, 
+Trail Twin is set for further enhancement. I plan to refine the CSS for an even more polished aesthetic. 
+Additionally, I plan transforming it into Swift code for iOS. 
+
+Thank you for watching

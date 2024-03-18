@@ -1,0 +1,18 @@
+
+----------------------------------------------------------------
+                            Trail Twin
+----------------------------------------------------------------
+
+
+
+What is Trail Twin?
+----------------------------------------------------------------
+- Trail Twin is a social media app meant for connection people near you with similar outdoor activity interests
+
+Features
+----------------------------------------------------------------
+- Users can login/register, upload profile photos, search for users by locations, activity interests, age and gender. Users can view other users profiles and edit their own profile. Another featuer is sending, accepting and declining friend request plus removing friends. Friends can also create chats with each other.
+
+Tech Stack
+----------------------------------------------------------------
+- Python, Flask, WTForms, SQLAlchemy, Google Maps API (for location search), Cloudinary API (for uploading profile photos), JavaScript, HTML, and CSS

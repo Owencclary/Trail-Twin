@@ -1,0 +1,92 @@
+{% for photo in display_photos %}
+    <div class="remove_element" data-route="/remove_photo/{{ photo.public_id }}">
+        <img class="display_photo" src="{{ photo.secure_url }} ">
+            <a href="/remove_photo/{{ photo.public_id }}"> Remove </a>
+    </div>
+{% endfor %}
+
+
+
+
+        <label for="filter">Radius:</label>
+        <input type="range" id="radius" name="radius" min="0" max="100" step="1" value="{{ radius }}">
+        <label for="filter">Min Age:</label>
+        <input type="range" id="age" name="min_age" min="0" max="100" step="1" value="{{ min_age }}">
+        <label for="filter">Max Age:</label>
+        <input type="range" id="age" name="max_age" min="0" max="100" step="1" value="{{ max_age }}">
+
+              <label for="filter">Activity:</label>
+        <select id="filter" name="activity">
+            <option value="{{ activity }}"> {{ activity }} </option>
+            <option value="All"> All </option>
+            <option value="Mountain Biking"> Mountain Biking </option>
+            <option value="Skiing"> Skiing </option>
+            <option value=" Backpacking"> Backpacking </option>
+        </select>
+
+
+
+
+
+
+
+
+          <!------------------- Edit Profile ------------------------->
+  <div class="container" style="width: 90vh; height: 100vh; margin: 0 auto; position: relative;">
+    <div class="card" style="width: 40rem;">
+
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://mbaction.com/Uploads/Public/Images/Animals/Mix%204.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.thesun.co.uk/wp-content/uploads/2020/12/NINTCHDBPICT000628196155.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.pinimg.com/736x/b8/fc/50/b8fc50398ffdd30c61114f5f532c9e0b.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title"> {{ user.first_name }}  {{ user.last_name }} </h5>
+        <div class="form-floating">
+          <textarea class="form-control" name="bio" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+          <label for="floatingTextarea2">Biography</label>
+        </div>
+      </div>
+
+      <ul class="list-group list-group-flush">
+        {% for activity in activities %}
+        <li class="list-group-item">{{ activity.activity_name }}</li>
+        {% endfor %}
+      </ul>
+
+      <div class="card-body">
+        <a type="button" class="btn btn-primary" href="/edit_profile"> Submit Changes </a>
+      </div>
+
+    
+
+    <form action="/add_photo" method="POST" enctype="multipart/form-data">
+      <div class="input-group">
+        <input type="file" class="form-control" id="inputGroupFile04" name="display_photo" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+        <button type="submit" class="btn btn-outline-secondary" id="inputGroupFileAddon04">Upload Photo</button>
+      </div>
+    </form>
+
+  </div>
